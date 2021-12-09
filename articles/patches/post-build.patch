@@ -1,0 +1,15 @@
+
+cp package/busybox/S10mdev ${TARGET_DIR}/etc/init.d/S10mdev
+chmod 755 ${TARGET_DIR}/etc/init.d/S10mdev
+cp package/busybox/mdev.conf ${TARGET_DIR}/etc/mdev.conf
+
+cp /work/articles/config/interfaces ${TARGET_DIR}/etc/network/interfaces
+cp /work/articles/config/wpa_supplicant.conf ${TARGET_DIR}/etc/wpa_supplicant.conf
+cp /work/articles/config/sshd_config ${TARGET_DIR}/etc/ssh/sshd_config
+
+cp /work/articles/config/S99app ${TARGET_DIR}/etc/init.d/S99app
+chmod 755 ${TARGET_DIR}/etc/init.d/S99app
+chown root:root ${TARGET_DIR}/etc/init.d/S99app
+
+mkdir ${TARGET_DIR}/usr/local/app -p
+cp app/* ${TARGET_DIR}/usr/local/app/ -ar
