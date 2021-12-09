@@ -14,7 +14,7 @@ $ cd pizeroW_BuidrootDocker
 Dockerfileを使用してRaspberryPi用のBuildroot環境イメージを作成します。
 
 ```bash
-pizerow_buildroot_docker$ docker build . -t pizerow_buildroot
+pizeroW_BuidrootDocker$ docker build . -t pizerow_buildroot
 ```
 
 ## rootパスワードの変更
